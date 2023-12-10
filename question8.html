@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>question 8</title>
+</head>
+<body>
+
+<script>
+
+    var startYear = parseInt(prompt("Enter the start year:"));
+    var endYear = parseInt(prompt("Enter the end year:"));
+
+
+    if (isNaN(startYear) || isNaN(endYear) || startYear >= endYear) {
+        document.write("<p>Please enter valid years with the start year less than the end year.</p>");
+    } else {
+
+        function isLeapYear(year) {
+            return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
+        }
+
+
+        document.write("<ul>");
+        for (var year = startYear; year <= endYear; year++) {
+            if (isLeapYear(year)) {
+                document.write("<li>" + year + "</li>");
+            }
+        }
+        document.write("</ul>");
+    }
+</script>
+
+</body>
+</html>

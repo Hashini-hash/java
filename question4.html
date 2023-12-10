@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>question 4</title>
+</head>
+<body>
+
+<script>
+
+    var studentName = prompt("Welcome to Hogwarts! Please enter your name:");
+
+
+    var randomValue = Math.floor(Math.random() * 4) + 1;
+
+
+    var house;
+    switch (randomValue) {
+        case 1:
+            house = "Gryffindor";
+            break;
+        case 2:
+            house = "Slytherin";
+            break;
+        case 3:
+            house = "Hufflepuff";
+            break;
+        case 4:
+            house = "Ravenclaw";
+            break;
+        default:
+            house = "Unknown House";
+    }
+
+
+    document.write("<p>" + studentName + ", you are sorted into " + house + "!</p>");
+</script>
+
+</body>
+</html>

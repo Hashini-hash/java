@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>question 7</title>
+</head>
+<body>
+
+<script>
+
+    var numberOfDiceRolls = parseInt(prompt("Enter the number of dice rolls:"));
+
+
+    if (isNaN(numberOfDiceRolls) || numberOfDiceRolls <= 0) {
+        document.write("<p>Please enter a valid positive number for the dice rolls.</p>");
+    } else {
+
+        function rollDie() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+
+        var sum = 0;
+        for (var i = 0; i < numberOfDiceRolls; i++) {
+            var rollResult = rollDie();
+            sum += rollResult;
+            console.log("Roll " + (i + 1) + ": " + rollResult);
+        }
+
+
+        document.write("<p>Sum of " + numberOfDiceRolls + " dice rolls: " + sum + "</p>");
+    }
+</script>
+
+</body>
+</html>
